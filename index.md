@@ -1,6 +1,6 @@
 # Outpost Privacy Policy
 
-**Last updated:** May 6, 2026
+**Last updated:** May 7, 2026
 
 This is the privacy policy for Outpost ("the app"), an iOS app for finding sports backer bars and submitting community ratings. Outpost is operated by the team behind the app ("we", "us").
 
@@ -21,6 +21,8 @@ This is the privacy policy for Outpost ("the app"), an iOS app for finding sport
 **Push notifications (future).** In a future version of Outpost, we may send push notifications about game start times, nearby bars, or other relevant updates. If you grant notification permission, your device will send Apple a push notification token, which we will store securely so we can deliver notifications to your device. You can revoke notification permission at any time in iOS Settings.
 
 **Advertising data.** Outpost displays advertisements provided by Google AdMob. AdMob may collect your device's Advertising Identifier (IDFA), your approximate location for ad relevance, and information about your interactions with ads (such as taps and impressions) for ad performance measurement. You can limit ad tracking by enabling "Limit Ad Tracking" in iOS Settings → Privacy & Security → Tracking. The first time the app launches, you will be prompted to allow or deny tracking via Apple's App Tracking Transparency (ATT) framework. For more information, see Google's privacy policy: https://policies.google.com/privacy
+
+**Crash and diagnostic data.** If the app crashes, Outpost uses Firebase Crashlytics (a Google service) to record a stack trace, your device model, OS version, app version, free memory and storage at the moment of the crash, and a Crashlytics-installation identifier that resets when you delete and reinstall the app. This information is uploaded to our crash-reporting console the next time you launch Outpost so we can diagnose and fix bugs. Crash reports do not include your name, email, location, anonymous Outpost user ID, photos, or anything you've typed into the app. For Google's privacy practices around Crashlytics, see https://firebase.google.com/support/privacy.
 
 **On-device data.** Outpost stores recently viewed bars and other app preferences on your device using standard iOS storage. This data never leaves your device.
 
@@ -44,6 +46,7 @@ We use the data above only to:
 - Display advertisements relevant to your usage of the app
 - Review and respond to abuse reports
 - Deliver push notifications, if you opt in
+- Diagnose and fix crashes
 
 We do not sell or rent personal user data. We share data with our service providers (Google Firebase and Google AdMob) as described above to operate the app.
 
@@ -51,7 +54,7 @@ We do not sell or rent personal user data. We share data with our service provid
 
 Outpost uses the following third-party services:
 
-- **Google Firebase** (Authentication, Firestore Database, Cloud Functions, and in a future version Cloud Messaging) — provides app infrastructure. Privacy policy: https://policies.google.com/privacy
+- **Google Firebase** (Authentication, Firestore Database, Cloud Functions, Crashlytics for crash diagnostics, and in a future version Cloud Messaging) — provides app infrastructure. Privacy policy: https://policies.google.com/privacy
 - **Google AdMob** — provides advertising. Privacy policy: https://policies.google.com/privacy
 
 These providers receive only the data described above, and only as needed to operate their portions of the app.
