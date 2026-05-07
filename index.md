@@ -34,7 +34,7 @@ Outpost does NOT collect:
 - Photos, videos, or audio
 - Contacts, calendar, or health data
 - Browsing or search history outside the app
-- Third-party analytics beyond what AdMob requires for ad delivery
+- Third-party analytics beyond AdMob (advertising) and Firebase Crashlytics (crash diagnostics)
 
 ## How we use information
 
