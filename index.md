@@ -43,7 +43,6 @@ We use the data above only to:
 - Find bars near your current location
 - Display advertisements relevant to your usage of the app
 - Review and respond to abuse reports
-- Deliver push notifications, if you opt in
 - Diagnose and fix crashes
 
 We do not sell or rent personal user data. We share data with our service providers (Google Firebase and Google AdMob) as described above to operate the app.
@@ -52,7 +51,7 @@ We do not sell or rent personal user data. We share data with our service provid
 
 Outpost uses the following third-party services:
 
-- **Google Firebase** (Authentication, Firestore Database, Cloud Functions, Crashlytics for crash diagnostics, and in a future version Cloud Messaging) — provides app infrastructure. Privacy policy: https://policies.google.com/privacy
+- **Google Firebase** (Authentication, Firestore Database, Cloud Functions, and Crashlytics for crash diagnostics) — provides app infrastructure. Privacy policy: https://policies.google.com/privacy
 - **Google AdMob** — provides advertising. Privacy policy: https://policies.google.com/privacy
 
 These providers receive only the data described above, and only as needed to operate their portions of the app.
