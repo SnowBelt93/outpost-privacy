@@ -2,7 +2,7 @@
 
 **Last updated:** May 6, 2026
 
-This is the privacy policy for Outpost ("the app"), an iOS app for finding sports backer bars and submitting community ratings. Outpost is operated by Kyle Fecik ("we", "us").
+This is the privacy policy for Outpost ("the app"), an iOS app for finding sports backer bars and submitting community ratings. Outpost is operated by the team behind the app ("we", "us").
 
 ## Information we collect
 
@@ -76,4 +76,4 @@ We may update this policy from time to time. The "Last updated" date at the top 
 
 ## Contact
 
-Questions or concerns? Email: [your-new-outpost-email-here]
+Questions or concerns? Email: outpostforfans@gmail.com
