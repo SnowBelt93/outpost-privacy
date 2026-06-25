@@ -1,6 +1,6 @@
 # Outpost Privacy Policy
 
-**Last updated:** June 22, 2026
+**Last updated:** June 24, 2026
 
 This is the privacy policy for Outpost ("the app"), an iOS app for finding sports backer bars and submitting community ratings. Outpost is operated by the team behind the app ("we", "us").
 
@@ -13,6 +13,8 @@ This is the privacy policy for Outpost ("the app"), an iOS app for finding sport
 **Location data.** With your permission, Outpost accesses your current location to show bars near you and to surface relevant suggestions. Location data is used in-memory only — we do not store your location on our servers or share it with anyone. You can deny location access in iOS Settings, in which case Outpost will use a default location.
 
 **Reviews and nominations.** When you rate a bar or nominate a new bar, that information is stored in our database (Google Firestore). Reviews include yes/no/skip answers to questions about a bar's qualities (such as fight songs, sound, crowd, decor, and food) and a verdict question asking whether you would watch a game from your team there again. Nominations include the bar's name, address, and approximate location. To place a nominated bar on the map, we send its address (and no personal information) to geocoding services that turn an address into map coordinates: the US Census Bureau geocoder for US addresses, and OpenStreetMap / Nominatim for addresses outside the US. Reviews and nominations are public to all Outpost users in aggregated form.
+
+**Game plans, RSVPs, and check-ins.** When you RSVP to watch a game at a bar ("I'm going"), Outpost saves a game plan — the bar, the game, and your anonymous user ID — in our database (Google Firestore), so we can show you your plan and, if you opt in, remind you before kickoff. The number of people who have RSVP'd to a particular bar for a particular game is **public to all Outpost users as an aggregate count** ("X going"); **who specifically RSVP'd is private and is never shown to other users.** Likewise, when you check in at a bar during a live game ("I'm here now"), we store a check-in record with your anonymous user ID, and other users see only the **aggregate count** of how many people are there ("X here now") — never who. You can remove an RSVP or a check-in at any time within the app.
 
 **Bar ownership claims.** If you use the "Own this bar?" feature to claim or request to manage a bar listing, we collect the name, email address, phone number, and any notes you provide, so we can contact you about your claim. This information is stored in our database and used only to follow up on the claim.
 
