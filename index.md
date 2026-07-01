@@ -1,6 +1,6 @@
 # Outpost Privacy Policy
 
-**Last updated:** June 24, 2026
+**Last updated:** June 30, 2026
 
 This is the privacy policy for Outpost ("the app"), an iOS app for finding sports backer bars and submitting community ratings. Outpost is operated by the team behind the app ("we", "us").
 
@@ -15,6 +15,8 @@ This is the privacy policy for Outpost ("the app"), an iOS app for finding sport
 **Reviews and nominations.** When you rate a bar or nominate a new bar, that information is stored in our database (Google Firestore). Reviews include yes/no/skip answers to questions about a bar's qualities (such as fight songs, sound, crowd, decor, and food) and a verdict question asking whether you would watch a game from your team there again. Nominations include the bar's name, address, and approximate location. To place a nominated bar on the map, we send its address (and no personal information) to geocoding services that turn an address into map coordinates: the US Census Bureau geocoder for US addresses, and OpenStreetMap / Nominatim for addresses outside the US. Reviews and nominations are public to all Outpost users in aggregated form.
 
 **Game plans, RSVPs, and check-ins.** When you RSVP to watch a game at a bar ("I'm going"), Outpost saves a game plan — the bar, the game, and your anonymous user ID — in our database (Google Firestore), so we can show you your plan and, if you opt in, remind you before kickoff. The number of people who have RSVP'd to a particular bar for a particular game is **public to all Outpost users as an aggregate count** ("X going"); **who specifically RSVP'd is private and is never shown to other users.** Likewise, when you check in at a bar during a live game ("I'm here now"), we store a check-in record with your anonymous user ID, and other users see only the **aggregate count** of how many people are there ("X here now") — never who. You can remove an RSVP or a check-in at any time within the app.
+
+**Calendar access.** If the "Add games to calendar" setting is on, Outpost adds the games you RSVP to your device calendar so you don't miss kickoff. The first time it syncs, iOS asks your permission for calendar access. For each RSVP we write one event — the matchup, the start time, and the bar's name and address — and we store that event's identifier alongside your game plan (in our database) so we can update the event if you switch bars or remove it if you cancel your RSVP. Outpost only adds, updates, and removes these game events; it does not read or collect your other calendar entries. You can turn the setting off at any time in Outpost, or revoke calendar access in iOS Settings.
 
 **Bar ownership claims.** If you use the "Own this bar?" feature to claim or request to manage a bar listing, we collect the name, email address, phone number, and any notes you provide, so we can contact you about your claim. This information is stored in our database and used only to follow up on the claim.
 
@@ -41,7 +43,7 @@ This is the privacy policy for Outpost ("the app"), an iOS app for finding sport
 Outpost does NOT collect:
 
 - Photos, videos, or audio
-- Your contacts, calendar, or health data
+- Your contacts or health data (and we do not read your existing calendar entries — see "Calendar access" above)
 - Your browsing or search history outside the app
 - A stored history of your location (location is used in-memory only)
 - Third-party analytics beyond AdMob (advertising) and Firebase Crashlytics (crash diagnostics)
@@ -58,6 +60,7 @@ We use the data above only to:
 - Maintain your account and display name if you sign in
 - Follow up on bar ownership claims you submit
 - Send notifications you've opted into
+- Add games you RSVP to your device calendar, if you enable it
 - Display advertisements relevant to your usage of the app
 - Review and respond to abuse reports
 - Diagnose and fix crashes
@@ -85,6 +88,8 @@ These providers receive only the data described above, and only as needed to ope
 
 **Notifications.** You can revoke notification permission at any time via iOS Settings → Notifications → Outpost. You can also disable notifications from Outpost's own settings screen.
 
+**Calendar.** You can stop adding games to your calendar at any time with the "Add games to calendar" toggle in Outpost's settings, or revoke calendar access via iOS Settings → Privacy & Security → Calendars → Outpost.
+
 **Your account.** Signing in with Apple is optional. You can manage or revoke Sign in with Apple access for Outpost at any time via iOS Settings → (your name) → Sign in with Apple.
 
 **Access, correction, and deletion.** By default Outpost uses anonymous authentication, so we have no way to identify you outside the app. If you have signed in with Apple, your contributions are linked to your account. To request access to, correction of, or deletion of your data:
@@ -97,7 +102,7 @@ These providers receive only the data described above, and only as needed to ope
 
 **California residents** have additional rights under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA), including the right to know what categories of personal information we have collected, the right to delete it, the right to correct inaccurate information, and the right to opt out of the sale or sharing of personal information. We do not sell or share personal information. To exercise these rights, contact us at the email above.
 
-**EU and UK residents.** If you are in the European Union or United Kingdom, you have rights under the General Data Protection Regulation (GDPR) or UK GDPR, including the rights to access, rectification, erasure, restriction of processing, and data portability. The lawful basis for our processing is your consent (which you provide by using the app and, for notifications, location, and Sign in with Apple, via the system permission prompts) and our legitimate interest in operating the service. To exercise these rights, contact us at the email above.
+**EU and UK residents.** If you are in the European Union or United Kingdom, you have rights under the General Data Protection Regulation (GDPR) or UK GDPR, including the rights to access, rectification, erasure, restriction of processing, and data portability. The lawful basis for our processing is your consent (which you provide by using the app and, for notifications, location, and Sign in with Apple, via the system permission prompts, which now also include calendar access) and our legitimate interest in operating the service. To exercise these rights, contact us at the email above.
 
 ## Children's privacy
 
