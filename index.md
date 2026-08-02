@@ -1,8 +1,8 @@
 # Outpost Privacy Policy
 
-**Last updated:** June 30, 2026
+**Last updated:** August 2, 2026
 
-This is the privacy policy for Outpost ("the app"), an iOS app for finding sports backer bars and submitting community ratings. Outpost is operated by the team behind the app ("we", "us").
+This is the privacy policy for Outpost — an iOS app for finding sports backer bars and submitting community ratings — and for the Outpost app on Reddit (together, "the app"). Outpost is operated by the team behind the app ("we", "us"). Sections below that apply to only one of the two say so.
 
 ## Information we collect
 
@@ -10,9 +10,18 @@ This is the privacy policy for Outpost ("the app"), an iOS app for finding sport
 
 **Account information (Sign in with Apple).** Signing in is optional — Outpost works fully without an account. If you choose to Sign in with Apple, we link your existing anonymous account to your Apple ID so your contributions stay tied to you. Apple shares your name with us the first time you sign in, and we use it as your display name (if you provide no name, we use a default, "Outpost Fan"). Apple may also share an email address, which can be a private relay address that forwards to your inbox without revealing it; we do not use your email inside the app, but it is retained by our authentication provider (Firebase) as part of your sign-in record. In our own database we store only your display name and the date your account was created — not your email, Apple ID, or other personal details.
 
+**If you use Outpost through Reddit.** The Outpost app on Reddit is a separate way to reach the same bar directory. It does not use the anonymous account described above. Instead, Reddit — which has already signed you in — tells us your Reddit username, and we receive the actions you take: the team and city you look up, the bars you rate, and the details of any bar you submit (its name and street address). We never see or handle your Reddit password.
+
+We keep your Reddit username in two forms, for two different reasons:
+
+- **As a one-way hash** (SHA-256 with a secret we hold on our servers). This hashed value is what your ratings are recorded against, and it is what lets us enforce one rating per bar per Reddit account. It cannot be turned back into your username.
+- **As plaintext, in an access-restricted internal store** that only our administrators can read. This exists for one purpose — investigating suspected manipulation of community ratings, for example when a subreddit moderator or Reddit reports it. It is never displayed in the app, never attached to a rating that anyone can see, and never shared.
+
+Bar names and addresses are business information, not personal information. Your use of Reddit itself is governed by Reddit's own privacy policy, not this one.
+
 **Location data.** With your permission, Outpost accesses your current location to show bars near you and to surface relevant suggestions. Location data is used in-memory only — we do not store your location on our servers or share it with anyone. You can deny location access in iOS Settings, in which case Outpost will use a default location.
 
-**Reviews and nominations.** When you rate a bar or nominate a new bar, that information is stored in our database (Google Firestore). Reviews include yes/no/skip answers to questions about a bar's qualities (such as fight songs, sound, crowd, decor, and food) and a verdict question asking whether you would watch a game from your team there again. Nominations include the bar's name, address, and approximate location. To place a nominated bar on the map, we send its address (and no personal information) to geocoding services that turn an address into map coordinates: the US Census Bureau geocoder for US addresses, and OpenStreetMap / Nominatim for addresses outside the US. Reviews and nominations are public to all Outpost users in aggregated form.
+**Reviews and nominations.** When you rate a bar or nominate a new bar, that information is stored in our database (Google Firestore). Reviews include yes/no/skip answers to questions about a bar's qualities (such as fight songs, sound, crowd, decor, and food) and a verdict question asking whether you would watch a game from your team there again. Nominations include the bar's name, address, and approximate location. To place a nominated bar on the map, we send its address (and no personal information) to geocoding services that turn an address into map coordinates: the US Census Bureau geocoder is tried first, and OpenStreetMap / Nominatim is used as a fallback — including for addresses outside the US, where the Census geocoder has no coverage. Reviews and nominations are public to all Outpost users in aggregated form. Bars submitted through the Reddit app are geocoded the same way, on our servers rather than on your device.
 
 **Game plans, RSVPs, and check-ins.** When you RSVP to watch a game at a bar ("I'm going"), Outpost saves a game plan — the bar, the game, and your anonymous user ID — in our database (Google Firestore), so we can show you your plan and, if you opt in, remind you before kickoff. The number of people who have RSVP'd to a particular bar for a particular game is **public to all Outpost users as an aggregate count** ("X going"); **who specifically RSVP'd is private and is never shown to other users.** Likewise, when you check in at a bar during a live game ("I'm here now"), we store a check-in record with your anonymous user ID, and other users see only the **aggregate count** of how many people are there ("X here now") — never who. You can remove an RSVP or a check-in at any time within the app.
 
@@ -36,7 +45,9 @@ This is the privacy policy for Outpost ("the app"), an iOS app for finding sport
 
 **Crash and diagnostic data.** If the app crashes, Outpost uses Firebase Crashlytics (a Google service) to record a stack trace, your device model, OS version, app version, free memory and storage at the moment of the crash, and a Crashlytics-installation identifier. This information is uploaded to our crash-reporting console the next time you launch Outpost so we can diagnose and fix bugs. Crash reports do not include your name, email, location, anonymous Outpost user ID, photos, or anything you've typed into the app. For Google's privacy practices around Crashlytics, see https://firebase.google.com/support/privacy.
 
-**On-device data.** Outpost stores recently viewed bars and other app preferences on your device using standard iOS storage. This data never leaves your device.
+**Home-screen widget (iOS).** If you add the Outpost widget, the app writes a small snapshot to a shared container on your device so the widget can draw without doing any lookup of its own. The snapshot holds only what the widget displays: your next game's teams, the kickoff time, and the name of the bar you've RSVP'd to, if any. It stays on your device, and the widget makes no network requests and reads nothing from our database.
+
+**On-device data and offline cache.** Outpost stores recently viewed bars and other app preferences on your device using standard iOS storage. The app also keeps a local cache of database content it has already loaded — bars, ratings, and your own plans — so it works offline and uses less network. This cache lives on your device, is managed by the Firebase SDK, and is removed when you delete the app. This data never leaves your device.
 
 ## Information we do not collect
 
@@ -48,7 +59,16 @@ Outpost does NOT collect:
 - A stored history of your location (location is used in-memory only)
 - Third-party analytics beyond AdMob (advertising) and Firebase Crashlytics (crash diagnostics)
 
-We never ask for your name, email, or phone number except when you choose to Sign in with Apple or submit a bar ownership claim, as described above. We do not sell or rent your personal information.
+From the Reddit app specifically, we do NOT collect:
+
+- Your Reddit posts, comments, votes, saved items, or browsing history
+- Which subreddits you belong to or visit
+- Your Reddit email address or any account credentials
+- Device identifiers, advertising identifiers, or location data
+
+We receive only the username Reddit provides and the actions you deliberately take in the Outpost app. The Reddit app shows no ads and requests no device permissions.
+
+We never ask for your name, email, or phone number except when you choose to Sign in with Apple or submit a bar ownership claim, as described above; on Reddit, we receive the username you already use publicly there. We do not sell or rent your personal information.
 
 ## How we use information
 
@@ -64,8 +84,9 @@ We use the data above only to:
 - Display advertisements relevant to your usage of the app
 - Review and respond to abuse reports
 - Diagnose and fix crashes
+- On Reddit: show you bars for the team and city you asked about; record your rating and make sure each Reddit account rates a given bar once; add a bar you submit to the shared directory; apply daily submission limits that protect the free public mapping services we depend on; and investigate abuse, such as coordinated vote manipulation, when it is reported to us
 
-We do not sell or rent personal user data. We share data with our service providers as described above to operate the app.
+We do not use Reddit data for advertising or profiling, and we do not combine your Reddit activity with any Outpost iOS account. We do not sell or rent personal user data. We share data with our service providers as described above to operate the app.
 
 ## Service providers
 
@@ -76,7 +97,8 @@ Outpost uses the following third-party services:
 - **Google AdMob** — provides advertising. Privacy policy: https://policies.google.com/privacy
 - **TheSportsDB** — provides sports schedule and live game data. No personal information is sent; only league and season identifiers are queried. See https://www.thesportsdb.com for their terms.
 - **US Census Bureau Geocoder** — converts a nominated bar's US address into map coordinates. Only the bar's address is sent; no personal information. See https://geocoding.geo.census.gov
-- **OpenStreetMap / Nominatim** — converts a nominated bar's non-US address into map coordinates. Only the bar's address is sent; no personal information. Privacy policy: https://osmfoundation.org/wiki/Privacy_Policy
+- **OpenStreetMap / Nominatim** — converts a nominated bar's address into map coordinates when the Census geocoder cannot, including addresses outside the US. Only the bar's address is sent; no personal information. Privacy policy: https://osmfoundation.org/wiki/Privacy_Policy
+- **Reddit** — hosts the Outpost app on Reddit and signs you in there. Reddit provides us your username; we do not provide Reddit any information about you. Your use of Reddit is governed by Reddit's own privacy policy: https://www.reddit.com/policies/privacy-policy
 
 These providers receive only the data described above, and only as needed to operate their portions of the app.
 
@@ -89,6 +111,8 @@ These providers receive only the data described above, and only as needed to ope
 **Notifications.** You can revoke notification permission at any time via iOS Settings → Notifications → Outpost. You can also disable notifications from Outpost's own settings screen.
 
 **Calendar.** You can stop adding games to your calendar at any time with the "Add games to calendar" toggle in Outpost's settings, or revoke calendar access via iOS Settings → Privacy & Security → Calendars → Outpost.
+
+**Reddit app.** You can stop using the Outpost app on Reddit at any time. To have your Reddit data removed — the stored username and the ratings tied to it — email us with your Reddit username using the address below. Bars you submitted will normally stay in the directory, because they describe a public business rather than you; tell us if you would like your submission attributed to no one and we will detach it.
 
 **Your account.** Signing in with Apple is optional. You can manage or revoke Sign in with Apple access for Outpost at any time via iOS Settings → (your name) → Sign in with Apple.
 
